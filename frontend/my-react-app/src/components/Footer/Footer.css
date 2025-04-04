@@ -1,0 +1,227 @@
+.footer-container {
+    background-color:#080808;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    margin-top: 30px;
+    width: 100%;
+    
+}
+
+.footer-content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-left-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.footer-brand-logo {
+    display: flex;
+    align-items: center;
+}
+.footer-brand-logo h1{
+    font-family: 'Roboto', sans-serif; /* Android's default font */
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #2706e2;
+}
+.footer-brand-logo span::after{
+    content: 'Tech';
+  color: #E53935; /* Material Design red */
+  font-weight: 700;
+}
+.footer-nav-links li{
+    list-style: none !important;
+}
+
+.footer-quick-links-section {
+    padding: 2rem 0;
+  }
+  
+  .footer-quick-links-title {
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+  
+  .footer-quick-links-list {
+    list-style: none !important;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-quick-links-list li {
+    margin-bottom: 0.75rem;
+  }
+  
+  .footer-nav-link {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-nav-link:hover {
+    color: #ffd700;
+    text-decoration: underline;
+  }
+  
+.footer-social-icons {
+    display: flex;
+    gap: 1.2rem;
+}
+
+.footer-social-icon {
+    color: #ffffff;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.footer-social-icon:hover {
+    transform: translateY(-3px);
+    color: #bd3220;
+}
+
+.footer-quick-links-section {
+    padding-top: 1rem;
+}
+
+.footer-quick-links-title {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-quick-links-list {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-quick-links-list li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-review-section {
+    padding-top: 1rem;
+}
+
+.footer-review-title {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-review-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer-review-input {
+    padding: 0.8rem;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background-color: #2a2a2a;
+    color: #ffffff;
+}
+
+.footer-rating-container {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.footer-star-button {
+    background: none;
+    border: none;
+    width: auto;
+    font-size: 1.5rem;
+    color: #b11b1b;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.footer-star-button.filled {
+    color: #ffd700;
+    
+}
+
+.footer-review-textarea {
+    padding: 0.8rem;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background-color: #2a2a2a;
+    color: #ffffff;
+    min-height: 100px;
+    resize: vertical;
+}
+
+.footer-submit-button {
+    padding: 0.8rem 1.5rem;
+    background-color: #f0c60e;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.footer-submit-button:hover {
+    background-color: #8c9cb4;
+}
+
+.footer-bottom-section {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #333;
+    text-align: center;
+}
+
+.footer-copyright {
+    margin-bottom: 0.5rem;
+}
+.footer-copyright p{
+    color: whitesmoke;
+}
+.footer-bottom-section p{
+    color: whitesmoke;
+}
+
+.footer-designer {
+    color: #0c3ddf;
+    font-weight: bold;
+}
+
+.footer-scroll-button {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: #4CAF50;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.footer-scroll-button:hover {
+    background-color: #45a049;
+}
+
+@media (max-width: 768px) {
+    .footer-content-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .footer-social-icons {
+        justify-content: center;
+    }
+}

@@ -1,0 +1,237 @@
+.budget-deals-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: center;
+
+    padding: 20px;
+  }
+  
+  .budget-deals-header {
+    text-align: center !important;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    background-color: #0052cc;
+  }
+  
+  .budget-deals-title {
+    font-size: 2rem;
+    color: whitesmoke;
+    margin-bottom: 10px;
+  }
+  
+  .budget-deals-subtitle {
+    font-size: 1.2rem;
+    color:black;
+  }
+  .budget-banner-text{
+    text-align: center;
+  }
+  .budget-products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+  }
+  
+  .budget-product-card {
+    position: relative;
+    border: 1px solid #e0e0e0;
+    background-color: white;
+    border-radius: 8px;
+    padding: 12px;
+    transition: all 0.3s ease;
+  }
+  
+  .budget-product-card:hover {
+    border-color: #ffcdd2;
+    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.1);
+    transform: translateY(-2px);
+  }
+  
+  .budget-discount-tag {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff1744;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    z-index: 1;
+  }
+  
+  .budget-product-image {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    border-radius: 4px;
+    margin-bottom: 12px;
+  }
+  
+  .budget-product-name {
+    font-size: 1rem;
+    color: #333;
+    margin: 8px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.4;
+  }
+  
+  .budget-price-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  
+  .budget-current-price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #df2e3c;
+  }
+  
+  .budget-original-price {
+    font-size: 0.9rem;
+    color: #999;
+    text-decoration: line-through;
+  }
+  
+  /* Skeleton Loading Styles */
+  .budget-product-skeleton {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 16px;
+    background: #fff;
+  }
+  
+  .budget-skeleton-image {
+    width: 100%;
+    height: 200px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    margin-bottom: 12px;
+  }
+  
+  .budget-skeleton-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .budget-skeleton-title {
+    height: 20px;
+    background-color: #f0f0f0;
+    width: 80%;
+    border-radius: 4px;
+  }
+  
+  .budget-skeleton-price {
+    height: 16px;
+    background-color: #f0f0f0;
+    width: 40%;
+    border-radius: 4px;
+  }
+  
+  .animate-pulse {
+    animation: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+  
+  /* Error and Empty States */
+  .budget-error-message {
+    color: #ff1744;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.1rem;
+  }
+  
+  .budget-empty-message {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+    font-size: 1.1rem;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .budget-products-grid {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 15px;
+    }
+  
+    .budget-deals-title {
+      font-size: 1.5rem;
+    }
+  
+    .budget-deals-subtitle {
+      font-size: 1rem;
+    }
+  }
+  @media (max-width: 500px) {
+    .budget-deals-wrapper {
+      max-width: 100%;
+      padding: 15px 10px;
+    }
+  
+    .budget-deals-title {
+      font-size: 1.5rem;
+    }
+  
+    .budget-deals-subtitle {
+      font-size: 1rem;
+    }
+  
+    .budget-products-grid {
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+     
+      gap: 10px;
+    }
+  
+    .budget-product-card {
+      padding: 10px;
+     
+    }
+  
+    .budget-product-image {
+      height: 140px;
+      object-fit: contain;
+    }
+  }
+  
+  @media (max-width: 350px) {
+    .budget-products-grid {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+  
+    .budget-product-card {
+    padding: 10px;
+    height: auto;
+    }
+  
+    .budget-product-image {
+      height: auto;
+      max-height: 120px;
+    }
+  
+    .budget-product-name {
+      font-size: 0.85rem;
+    }
+  
+    .budget-current-price {
+      font-size: 0.9rem;
+    }
+  
+    .budget-original-price {
+      font-size: 0.8rem;
+    }
+  }

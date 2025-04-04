@@ -1,0 +1,232 @@
+.offers {
+    max-width: 1200px;
+    justify-content: center;
+    width: 100%;
+    margin-top: 200px;
+    margin: 0 auto;
+    height: 400px;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 1fr;
+    gap: 2rem;
+    padding: 2rem 4%;
+    background: linear-gradient(135deg, #96abc5 0%, #e7b475 100%);
+    position: relative;
+    overflow: hidden;
+
+}
+
+.offers-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.0rem;
+    padding: 1rem;
+}
+
+.offers-left h1 {
+    color: #1E40AF;
+    font-size: clamp(1.7rem, 4vw, 2.8rem);
+    font-weight: 700;
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    animation: slideInLeft 0.8s ease-out;
+}
+
+.offers-left p {
+    color: #4B5563;
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    line-height: 1.6;
+    max-width: 90%;
+    animation: fadeIn 1s ease-out 0.3s both;
+}
+
+.offers-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    animation: floatAnimation 6s ease-in-out infinite;
+}
+
+.offers-right img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.offers-right img:hover {
+    transform: scale(1.05);
+}
+
+.far-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.far-right h1 {
+    color: #F97316;
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-weight: 700;
+    line-height: 1.3;
+    animation: slideInRight 0.8s ease-out;
+}
+
+.check-now-btn {
+    background: #2563EB;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: auto;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.2);
+}
+
+.check-now-btn:hover {
+    background: #1D4ED8;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.3);
+}
+
+.check-now-btn:active {
+    transform: translateY(0);
+}
+
+/* Animations */
+@keyframes floatAnimation {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .offers {
+        grid-template-columns: 1fr 1fr;
+        height: auto;
+        min-height: 60vh;
+        width: auto;
+        margin: auto;
+    }
+    
+    .far-right {
+        grid-column: 1 / -1;
+        text-align: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .offers {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 2rem 1rem;
+        width: auto;
+        margin: auto;
+    }
+
+    .offers-left, .offers-right, .far-right {
+        text-align: center;
+        align-items: center;
+    }
+
+    .offers-left h1, .far-right h1 {
+        font-size: clamp(1.5rem, 6vw, 2rem);
+    }
+
+    .offers-right img {
+        max-width: 70%;
+    }
+
+    .check-now-btn {
+        padding: 0.8rem 1.6rem;
+        font-size: 1rem;
+    }
+}
+@media (max-width: 500px) {
+    .offers {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        width: 80%;
+        gap: 1rem;
+        padding: 1.5rem 1rem;
+        margin-top: 100px;
+        background: linear-gradient(135deg, #96abc5 0%, #e7b475 100%);
+    }
+
+    .offers-left, 
+    .far-right {
+        padding: 1rem;
+    }
+
+    .offers-left h1, 
+    .far-right h1 {
+        font-size: 1.2rem;
+    }
+
+    .offers-left p {
+        font-size: 1rem;
+        max-width: 90%;
+    }
+
+    .offers-right img {
+        max-width: 80%;
+        height: auto;
+    }
+
+    .check-now-btn {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,241 @@
+/* Base Styles */
+.vitron-best-products {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Header Container */
+.vitron-header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    background-color: #0052cc;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    padding: 15px 10px;
+
+}
+
+.vitron-title-head {
+    font-size: 1.3rem;
+    color: whitesmoke;
+    
+}
+
+.vitron-view-all {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.vitron-view-all:hover {
+    color: whitesmoke;
+}
+.vitron-subtitle{
+    text-align: center;
+    color: black;
+}
+
+/* Products Grid */
+.vitron-products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    width: 100%;
+}
+
+/* Product Card */
+.vitron-product-card {
+    position: relative;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.vitron-product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    border-color: red;
+}
+
+/* Image Link */
+.vitron-image-link {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+.vitron-product-image {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.vitron-product-card:hover .vitron-product-image {
+    transform: scale(1.05);
+}
+
+/* Discount Badge */
+.vitron-discount-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: red;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    z-index: 10;
+}
+
+/* Product Details */
+.vitron-product-details {
+    padding: 15px;
+    text-align: left;
+}
+
+.vitron-product-name {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.vitron-price-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.vitron-price {
+    color: #df2e3c;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.vitron-old-price {
+    color: #888;
+    text-decoration: line-through;
+    font-size: 0.9rem;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 1200px) {
+    .vitron-products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .vitron-header-container {
+    display: flex;
+    justify-content: space-evenly;
+    width: 91%;
+   
+    
+    }
+
+    .vitron-view-all {
+
+    }
+
+    .vitron-products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 10px;
+    }
+
+    .vitron-product-image {
+        height: 200px;
+    }
+
+    .vitron-title {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .vitron-best-products {
+        width: auto;
+        padding: 15px 10px;
+    }
+
+    .vitron-header-container {
+     display: flex;
+
+     flex-direction: column;
+        margin-bottom: 15px;
+    }
+
+    .vitron-products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      
+        gap: 10px;
+    }
+
+    .vitron-product-card {
+      padding: 10px;
+    }
+
+    .vitron-product-image {
+        height: 140px;
+    }
+
+    .vitron-product-details {
+        padding: 10px;
+    }
+
+    .vitron-product-name {
+        font-size: 0.9rem;
+    }
+
+    .vitron-price {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .vitron-products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .vitron-product-card {
+       padding: 10px;
+    }
+
+    .vitron-product-image {
+        height: auto;
+        max-height: 120px;
+    }
+
+    .vitron-product-name {
+        font-size: 0.8rem;
+    }
+
+    .vitron-price {
+        font-size: 0.9rem;
+    }
+    
+    .vitron-old-price {
+        font-size: 0.75rem;
+    }
+    
+    .vitron-discount-badge {
+        padding: 2px 6px;
+        font-size: 10px;
+    }
+}

@@ -1,0 +1,564 @@
+.nav-container {
+    width: 100% !important;
+    background-color:whitesmoke;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.nav-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    margin: 0 auto;
+    width: auto;
+    position: relative; /* Added position relative */
+}
+
+/* Left section with hamburger and logo */
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Logo styling */
+.nav-logo {
+    cursor: pointer;
+}
+
+.nav-logo h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #333333;
+    margin: 0;
+}
+  
+.nav-logo span::after {
+    content: 'Tech';
+    color: #E53935;
+    font-weight: 700;
+}
+
+/* Hamburger menu button - visible on all screen sizes */
+.nav-hamburger-btn {
+    display: block;
+    font-size: 24px;
+    position: relative; /* Changed from sticky to relative */
+    color: #282828;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1200; /* Increased z-index to be above the nav-links */
+    padding: 8px;
+}
+
+/* Search container styles */
+.nav-search-container {
+    flex: 1;
+    max-width: 600px;
+    margin: 0 20px;
+}
+
+.nav-search-bar {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    border: 2px solid #f6491e;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.nav-search-input {
+    flex: 1;
+    padding: 0 15px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+.nav-search-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    background-color: #f34e0d;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.nav-spinner {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Icons section */
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.nav-icons a, 
+.nav-icons .nav-profile-btn {
+    width: auto !important; /* Override any width inheritance */
+    padding: 8px !important; /* Adjust as needed */
+    background: transparent !important; /* Override background color */
+    border: none!important;
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    
+}
+
+.nav-icon-cart{
+    color: rgba(0, 0, 15, 0.836);
+    stroke-linecap: square;
+    stroke-linejoin: miter;
+    content: "cart";
+}
+  
+/* Also fix any other navbar buttons that might be affected */
+.nav-icons button,
+.nav-hamburger-btn,
+.nav-search-btn,
+.nav-search-icon-btn {
+    width: auto !important;
+    background: transparent !important;
+    border: none !important;
+    margin: 0 !important;
+    padding: 8px !important;
+    cursor: pointer !important;
+}
+
+/* Make search button background follow design */
+.nav-search-btn {
+    background-color: #f34e0d !important;
+}
+  
+/* Make sure cart icon container is also specific */
+.nav-cart-icon-container {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: auto !important;
+    position: relative;
+}
+
+.nav-cart-count {
+    position: absolute;
+    top: -9px;
+    right: -1px;
+    background-color: #e7532e;
+    color: white;
+    font-size: 12px;
+    padding: 4px 7px;
+    border-radius: 50%;
+}
+
+/* Profile dropdown */
+.nav-profile-container {
+    position: relative;
+    height: auto;
+    text-align: start;
+    display: inline-block;
+    cursor: pointer;
+    display: flex;
+}
+.user-text{
+    cursor:auto;
+    font-size: 20px;
+    text-transform: capitalize;
+    position: relative;
+    margin-top: 20px;
+    color: #f34e0d;
+}
+.cart-text{
+cursor: auto;
+font-size: 20px;
+text-transform: capitalize;
+margin-top: 20px;
+color: #f34e0d;
+}
+
+.nav-profile-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    border: 1px solid #eee;
+    border-top: 3px solid #ec5012;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-width: 150px;
+    max-height: 80vh;
+    overflow-y: auto;
+    z-index: 1100;
+    padding: 8px 0;
+    cursor: pointer !important;
+    background-color: #f5f5f5;
+}
+
+.nav-dropdown-item {
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+    transition: background-color 0.2s;
+}
+
+.nav-dropdown-item:hover {
+    background-color: #eee;
+}
+
+.nav-dropdown-link {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+/* Navigation links */
+.nav-links {
+    background-color: #ffffff;
+    border-top: 1px solid #eee;
+    display: none;
+    overflow-y: auto;
+    z-index: 100;
+    margin-top: 0; /* Changed from 80px to 0 */
+    max-height: calc(100vh - 70px); /* Adjusted the height */
+    position: absolute; /* Added position absolute */
+    top: 100%; /* Position it right below the navbar */
+    left: 0;
+    width: 300px; /* Fixed width for desktop */
+}
+
+.nav-links.nav-open {
+    display: block;
+}
+
+.nav-category-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100%;
+}
+
+.nav-item {
+    position: relative;
+    padding: 0;
+    border-bottom: 1px solid #eee;
+}
+
+.nav-item.nav-active {
+    background-color: #f8f8f8;
+}
+
+.nav-category-link {
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 15px 20px;
+    display: block !important;
+    text-decoration: none;
+    color: #333;
+}
+
+/* Style for active category */
+.nav-divider {
+    margin: 0;
+    border: none;
+    height: 2px;
+    background-color: #f36716;
+}
+
+/* Category container */
+.nav-item-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-category-indicator {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 15px;
+    color: #666;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-category-indicator:hover {
+    color: #000;
+}
+
+/* Category dropdown */
+.nav-category-dropdown {
+    background-color: #f8f8f8;
+    min-width: 100%;
+    z-index: 1000;
+}
+
+.nav-mobile-dropdown {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.nav-mobile-back-button {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    font-weight: bold;
+    background-color: #eaeaea;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+}
+
+.nav-mobile-back-button svg {
+    margin-right: 10px;
+}
+
+/* Large screens adjustments (desktop) */
+@media (min-width: 768px) {
+    .nav-links {
+        border-left: 1px solid #eee;
+        width: 300px;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        overflow-y: auto;
+    }
+    
+    .nav-top {
+        padding: 15px 20px;
+    }
+    
+    .nav-search-container {
+        margin: 0 30px;
+    }
+    
+    .nav-logo h1 {
+        font-size: 28px;
+    }
+}
+
+/* Medium screens */
+@media (max-width: 800px) {
+    .nav-top {
+        padding: 10px;
+    }
+    
+    .nav-search-container {
+        margin: 0 10px;
+    }
+    
+    .nav-links {
+        width: 250px; /* Reduced width for medium screens */
+    }
+}
+
+/* Small screens */
+@media (max-width: 640px) {
+    .nav-top {
+        flex-wrap: wrap;
+        gap: 1px;
+    }
+    
+    .nav-left {
+        width: auto; 
+       
+    }
+    
+    .nav-search-container {
+        width: 100%;
+        max-width: 100%;
+        margin: 10px 0 0 0;
+    }
+    
+    .nav-icons {
+        margin-left: auto;
+    }
+    
+    .nav-icons a, 
+    .nav-icons button {
+        font-size: 22px;
+    }
+    
+    .nav-links {
+        width: 100%; /* Full width on small screens */
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    .nav-top {
+        padding: 8px 5px;
+        width: 100%;
+    }
+    
+    .nav-icons {
+        gap: 15px;
+    }
+    
+    .nav-icons a, 
+    .nav-icons button {
+        font-size: 20px;
+    }
+    
+    .nav-search-bar {
+        height: 36px;
+    }
+    
+    .nav-search-input {
+        font-size: 13px;
+    }
+    
+    .nav-dropdown-item {
+        padding: 10px 15px;
+        font-size: 13px;
+    }
+    
+    .nav-category-link {
+        font-size: 13px;
+        padding: 12px 15px;
+    }
+    
+    .nav-category-indicator {
+        padding: 12px;
+    }
+    
+    .nav-mobile-back-button {
+        padding: 10px 15px;
+        font-size: 13px;
+    }
+}
+
+/* New styles for mobile search below 500px */
+@media (max-width: 500px) {
+    .nav-top {
+        flex-wrap: nowrap;
+        padding: 8px 10px;
+        width: auto;
+    }
+    .nav-logo{
+        width: auto;
+        flex-shrink: auto;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    
+    .nav-left {
+        width: auto;
+        justify-content: flex-start;
+    }
+    
+    /* Hide regular search container in navbar */
+    .nav-search-container {
+        display: none;
+    }
+    .user-text{
+       display: none;
+    }
+    .cart-text{
+   display: none;
+    }
+    
+    
+    /* Show the search icon button */
+    .nav-search-icon-btn {
+        display: flex;
+        flex-direction: column;
+        font-size: 22px;
+        color: #282828;
+        width: auto;
+        float: right;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+    }
+    
+    /* Expanded search container */
+    .nav-expanded-search-wrapper {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 92%;
+        background-color: white;
+        z-index: 1200;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+    }
+    
+    .nav-expanded-search-wrapper .nav-search-container {
+        display: block;
+        margin: 0;
+        max-width: none;
+    }
+    
+    /* Navbar icons alignment */
+    .nav-icons {
+        gap: 15px;
+        margin-left: auto;
+    }
+    
+    /* Fix icon alignment in search button */
+    .nav-search-btn .nav-icon {
+        width: 18px;
+        height: 18px;
+        color: white; /* Changed from #E53935 to white for better visibility */
+    }
+}
+
+/* Icon sizing */
+.nav-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* Dropdown item styling */
+.nav-dropdown-item {
+    display: block;
+    padding: 12px 20px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.2s;
+    text-transform: capitalize;
+}
+
+.nav-dropdown-item:hover {
+    background-color: #eaeaea;
+}
+
+/* Add semi-transparent overlay when menu is open */
+.nav-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 90;
+}
+
+.nav-overlay.nav-active {
+    display: block;
+}

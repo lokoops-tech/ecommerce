@@ -1,0 +1,154 @@
+/* General Styles */
+.youmaylike-container {
+  padding: 20px;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+
+}
+
+.youmaylike-container h1 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.youmaylike-container p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Grid System */
+.youmaylike-products-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr) !important;
+  gap: 10px;
+
+}
+
+/* Product Card */
+.youmaylike-product-card {
+  position: relative;
+  background: white !important;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  width: 200px;
+}
+
+.youmaylike-product-card:hover {
+  transform: translateY(-5px);
+  border-color: red;
+}
+
+.youmaylike-product-image-container {
+  width: 100%;
+  background-color: white;
+}
+
+.youmaylike-product-image-container img {
+  width: auto;
+  height: 180px;
+  object-fit: contain;
+}
+
+.youmaylike-product-details {
+  padding: 10px 0;
+}
+
+.youmaylike-product-name {
+  font-size: 1rem;
+  color: #333 !important;
+  margin-top: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  text-align: start !important;
+}
+
+.youmaylike-item-price {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  gap: 10px;
+}
+
+.youmaylike-item-price-new {
+  font-weight: bold;
+  color: #df2e3c;
+}
+
+.youmaylike-old-price {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.youmaylike-discount-badge {
+  position: absolute;
+  background-color: red;
+  color: white;
+  padding: 5px 9px;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  top: 10px;
+  right: 10px;
+  font-weight: bold;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  min-height: 25px;
+}
+
+/* Load More Button */
+.youmaylike-load-more {
+  margin-top: 20px;
+}
+
+.youmaylike-load-more button {
+  padding: 10px 20px;
+  background-color: #c93a3a;
+  color: white;
+  border: none;
+  width: auto;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.youmaylike-load-more button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .youmaylike-products-grid {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+  .youmaylike-product-image-container {
+      height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .youmaylike-container h1 {
+      font-size: 1.5rem;
+  }
+  .youmaylike-container p {
+      font-size: 0.9rem;
+  }
+  .youmaylike-products-grid {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)) !important;
+  }
+  .youmaylike-product-image-container {
+      height: auto;
+  }
+  .youmaylike-discount-badge {
+      font-size: 0.7rem;
+      padding: 4px 8px;
+  }
+}

@@ -1,0 +1,230 @@
+.deals-main-container {
+    padding: 15px;
+    margin-top: 30px;
+}
+
+.deals-header {
+    border-radius: 5px;
+    background-color: #0052cc;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    padding: 15px 10px;
+}
+
+.deals-header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.deals-page-title {
+    color: whitesmoke;
+    font-size: 1.75rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.deals-products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 0 auto;
+}
+
+.deals-product-card {
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0,0.3,0,0.05);
+    border-radius: 8px;
+    border: 1px solid #dad7d7;
+    padding: 15px;
+    transition: transform 0.3s ease;
+}
+.deals-product-card:hover {
+    transform: translateY(-5px);
+    border-color: #ffcdd2;
+    box-shadow: 0 4px 12px rgba(255, 0, 0, 0.1);
+}
+
+.deals-discount-tag {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff1744;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    z-index: 1;
+}
+
+.deals-product-wrapper {
+    position: relative;
+}
+
+.deals-product-image {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.deals-product-title {
+    font-size: 14px;
+    color: #333;
+    font-weight: 600;
+    margin: 10px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.deals-price-container {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.deals-current-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #df2e3c;
+}
+
+.deals-original-price {
+    font-size: 14px;
+    color: #666;
+    text-decoration: line-through;
+}
+
+.deals-load-more {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.deals-load-more-btn {
+    background: #003366;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.deals-load-more-btn:hover {
+    background: #e2ac18;
+    transform: translateY(-2px);
+}
+
+/* Skeleton Loading */
+.deals-skeleton-card {
+    height: 350px;
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+}
+
+.deals-skeleton-image {
+    height: 200px;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    animation: pulse 1.5s infinite;
+}
+
+.deals-skeleton-title {
+    height: 20px;
+    width: 80%;
+    background-color: #e0e0e0;
+    margin: 10px 0;
+    border-radius: 4px;
+    animation: pulse 1.5s infinite;
+}
+
+/* Error States */
+.deals-error-wrapper {
+    text-align: center;
+    padding: 2rem;
+    background-color: #fff5f5;
+    border-radius: 8px;
+    border: 1px solid #fed7d7;
+    margin: 2rem 0;
+}
+
+.deals-error-icon {
+    color: #e53e3e;
+    margin-bottom: 1rem;
+}
+
+.deals-retry-btn {
+    background-color: #e53e3e;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 0.8; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .deals-products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 15px;
+    }
+    
+    .deals-product-image {
+        height: 160px;
+    }
+}
+
+@media (max-width: 500px) {
+    .deals-main-container {
+        width: auto;
+        margin: auto;
+        padding: 10px; /* Reduced padding for smaller screens */
+    }
+    
+    .deals-products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 15px;
+    }
+
+    .deals-product-image {
+        height: 140px;
+        width: 100%; /* Change to 100% instead of auto */
+        object-fit: contain;
+    }
+
+    .deals-page-title {
+        font-size: 20px;
+    }
+
+    .deals-product-card {
+        padding: 10px;
+
+    }
+}
+
+/* Add another media query for very small screens */
+@media (max-width: 350px) {
+    .deals-products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    
+    .deals-product-card {
+      padding: 10px;
+    }
+    
+    .deals-product-image {
+        height: auto; /* Let height adjust proportionally */
+        max-height: 140px; /* Optional: limit the maximum height */
+    }
+}

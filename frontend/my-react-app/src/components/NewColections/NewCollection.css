@@ -1,0 +1,108 @@
+.new-collection {
+    padding: 1rem;
+    margin: 0 auto;
+    justify-content: center;
+    max-width: 1200px;
+  }
+  
+  .new-collection__title {
+    border-radius: 5px;
+    background-color: #0052cc;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    padding: 15px 10px;
+    text-align: center;
+    color: whitesmoke;
+  }
+  
+  
+  
+  .new-collection__loading {
+    text-align: center;
+    padding: clamp(1rem, 2vw, 2rem);
+  }
+  
+  .new-collection__error {
+    color: #ff4444;
+    text-align: center;
+    padding: clamp(1rem, 2vw, 2rem);
+  }
+  
+  .new-collection__empty {
+    text-align: center;
+    padding: clamp(1rem, 2vw, 2rem);
+    color: #666;
+  }
+  
+  .new-collection__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+
+  }
+  
+  .new-collection__item {
+   
+  }
+  
+  /* Larger Screens */
+  @media (max-width: 1024px) {
+    .new-collection {
+        padding: 1.7rem;
+        margin: 0 auto;
+        width: auto;
+    }
+    .new-collection__grid {
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)) !important;
+        gap: 40px;
+    }
+  }
+  
+  /* Tablet Screens */
+  @media (max-width: 800px) {
+    .new-collection {
+      width: auto;
+      margin: 0 auto;
+      justify-content: center;
+      padding: 1.6rem;
+
+    }
+    
+    .new-collection__grid {
+      display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 40px;
+    }
+
+  }
+  
+  /* Mobile Screens */
+  @media (max-width: 480px) {
+    .new-collection {
+      padding: 1.5rem;
+      width: auto;
+    }
+    .new-collection__divider {
+    display: none;
+    }
+    .new-collection__title {
+      text-align: start;
+    }
+    .new-collection__title {
+     
+     font-size:25px ;
+      padding: 10px 8px;
+    
+    }
+    .new-collection__grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)) !important;
+      gap: 40px;
+    }
+  }
+  
+  /* Small Mobile Screens */
+  @media (max-width: 350px) {
+    .new-collection__grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+  }

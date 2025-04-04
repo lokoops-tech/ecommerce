@@ -1,0 +1,202 @@
+.news {
+    min-height: 400px;
+    width: 100%;
+    background: linear-gradient(to bottom, #afc9eb, #dfbc91);
+    padding: 3rem 1rem;
+    box-sizing: border-box;
+    margin: auto;
+    max-width: 1200px;
+    margin-bottom: 100px;
+   
+}
+
+.news h1 {
+    color: #1E40AF;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.news p {
+    color: #4B5563;
+    font-size: 1.125rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.news-form {
+    max-width: 36rem;
+    margin: 0 auto;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column !important;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    margin: auto;
+}
+
+.news input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: 1px solid #D1D5DB;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    color: #374151;
+    width: auto;
+}
+
+.news input:focus {
+    outline: none;
+    border-color: #3B82F6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.news button {
+    display: flex;
+   
+    align-items: center ;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    background-color: #2563EB;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+    width: 100% ;
+    
+}
+
+.news button:hover {
+    background-color: #1D4ED8;
+}
+
+.news button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.message {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.message.success {
+    background-color: #DCFCE7;
+    color: #166534;
+}
+
+.message.error {
+    background-color: #FEE2E2;
+    color: #991B1B;
+}
+
+.popup {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    background-color: #22C55E;
+    color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    z-index: 50;
+}
+
+.loader {
+    display: inline-block;
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 1s linear infinite;
+    margin-right: 0.5rem;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive styles */
+@media (min-width: 640px) {
+    .news {
+        padding: 3rem 1.5rem;
+    }
+
+    .news h1 {
+        font-size: 2.5rem;
+    }
+
+    .input-group {
+        flex-direction: row;
+    }
+
+    .news button {
+        width: auto;
+    }
+}
+
+@media (min-width: 1024px) {
+    .news {
+        padding: 3rem 2rem;
+    }
+
+    .news h1 {
+        font-size: 3rem;
+    }
+}
+/* Add these styles to your NewsLatter.css file */
+
+.particles {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 1000;
+  }
+  
+  .particle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background:green;
+    border-radius: 50%;
+    animation: particle-explosion 1s ease-out forwards;
+    opacity: 0;
+  }
+  
+  @keyframes particle-explosion {
+    0% {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(
+        calc(cos(var(--angle)) * var(--distance)),
+        calc(sin(var(--angle)) * var(--distance))
+      );
+      opacity: 0;
+    }
+  }
+  
+  .particle {
+    animation-delay: var(--delay);
+  }
+
+
+

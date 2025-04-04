@@ -1,0 +1,45 @@
+.return-policy-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: Arial, sans-serif;
+}
+
+.return-policy-container h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+.return-content {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.return-content section {
+    margin-bottom: 2rem;
+}
+
+.return-content h2 {
+    color: #444;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.return-content p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.return-content ol {
+    padding-left: 1.5rem;
+}
+
+.return-content li {
+    color: #666;
+    padding: 0.5rem 0;
+    line-height: 1.4;
+}

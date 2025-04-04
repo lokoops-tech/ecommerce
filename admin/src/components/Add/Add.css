@@ -1,0 +1,111 @@
+.add-admin-container {
+  width: 90% !important;
+  max-width: 1100px !important;
+  margin: 20px auto !important;
+  padding: 20px !important;
+  background-color: #f9f9f9 !important;
+  border-radius: 10px !important;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1) !important;
+  text-align: center !important;
+}
+
+h2, h3 {
+  color: #333 !important;
+}
+
+input {
+  width: 100% !important;
+  padding: 10px !important;
+  margin: 5px 0 !important;
+  border: 1px solid #ccc !important;
+  border-radius: 5px !important;
+  font-size: 16px !important;
+}
+
+button {
+  padding: 10px 15px !important;
+  border: none !important;
+  cursor: pointer !important;
+  font-weight: bold !important;
+  border-radius: 5px !important;
+  transition: all 0.3s ease !important;
+  font-size: 16px !important;
+  margin-top: 10px !important;
+}
+
+.add-admin-btn {
+  background-color: #007bff !important;
+  color: white !important;
+}
+
+.add-admin-btn:hover {
+  background-color: #0056b3 !important;
+}
+
+.admins-list {
+  margin-top: 20px !important;
+}
+
+.admin-item {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  background-color: #fff !important;
+  padding: 10px !important;
+  border-radius: 5px !important;
+  margin-bottom: 10px !important;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1) !important;
+}
+
+.admin-item span {
+  flex: 1 !important;
+  font-size: 16px !important;
+}
+
+.admin-item button {
+  margin-left: 10px !important;
+  padding: 8px 12px !important;
+}
+
+.admin-item button:nth-child(2) {
+  background-color: #ffc107 !important;
+  color: #000 !important;
+}
+
+.admin-item button:nth-child(3) {
+  background-color: #dc3545 !important;
+  color: white !important;
+}
+
+.admin-item button:hover {
+  opacity: 0.8 !important;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .add-admin-container {
+    width: 95% !important;
+    padding: 15px !important;
+  }
+
+  input {
+    font-size: 14px !important;
+    padding: 8px !important;
+  }
+
+  button {
+    font-size: 14px !important;
+    padding: 8px !important;
+  }
+
+  .admin-item {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+
+  .admin-item button {
+    width: 100% !important;
+    margin: 5px 0 !important;
+  }
+}

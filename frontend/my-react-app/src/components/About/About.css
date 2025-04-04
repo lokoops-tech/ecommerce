@@ -1,0 +1,62 @@
+.about-container {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.about-header h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #4a4a4a;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #6200ea;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.why-choose-us, .about-achievements {
+    margin-top: 30px;
+}
+
+.why-choose-us h2, .about-achievements h2 {
+    font-size: 1.8rem;
+    color: #6200ea;
+    margin-bottom: 10px;
+}
+
+.why-choose-us ul, .about-achievements ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.why-choose-us li, .about-achievements li {
+    background-color: #fff;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+}
+
+.why-choose-us li strong, .about-achievements li strong {
+    color: #333;
+    font-weight: bold;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+

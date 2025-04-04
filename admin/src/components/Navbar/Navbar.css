@@ -1,0 +1,138 @@
+/* Base styles for the navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #004aad; /* Blue background */
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Navbar items */
+.nav-items {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Navbar icons */
+.nav-icon {
+  color: white;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.nav-icon:hover {
+  color: #f58505; /* Orange hover effect */
+}
+
+/* User icon dropdown */
+.nav-user-icon {
+  position: relative;
+  cursor: pointer;
+}
+
+.admin-dropdown {
+  position: absolute;
+  top: 120%;
+  right: 0;
+  background: #f58505;
+  border-radius: 8px;
+  min-width: 200px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  display: none; /* Initially hidden */
+}
+
+/* Show dropdown on hover */
+.nav-user-icon:hover .admin-dropdown {
+  display: block;
+}
+
+/* Dropdown user info */
+.user-info {
+  padding: 12px 16px;
+  border-bottom: 1px solid #3d3d3d;
+}
+
+.user-info p {
+  margin: 0;
+  color: #fff;
+}
+
+.user-info p:first-child {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+/* Dropdown links */
+.dropdown-item {
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  color: #fff;
+}
+
+.dropdown-item:hover {
+  background-color: #159dbe;
+}
+
+.dropdown-item a {
+  display: block;
+  width: 100%;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Hamburger Menu for Small Screens */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 800px) {
+  .nav-items {
+      display: none; /* Hide navbar items */
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background: #004aad;
+      width: 200px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+  }
+
+  .nav-items.show {
+      display: flex; /* Show menu when toggled */
+  }
+
+  .hamburger {
+      display: block; /* Show the hamburger menu */
+  }
+}
+
+/* Stack navbar items in a column layout below 480px */
+@media (max-width: 480px) {
+  .navbar {
+      display: flex;
+      justify-content: space-between;
+       width: auto;
+  }
+
+  .nav-items {
+      width: 100%;
+      text-align: left;
+  }
+}
+
+  
+  
+
+  

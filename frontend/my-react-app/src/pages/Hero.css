@@ -1,0 +1,411 @@
+/* Hero Section */
+.hero {
+  width: auto;
+  text-align: center;
+  padding: 20px;
+  background: #f8f1e4;
+  overflow: hidden;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.highlight {
+  color: #d9534f;
+}
+
+/* Holiday Banner */
+.holiday-banner {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  background: red;
+  padding: 10px;
+  width: auto;
+  overflow: hidden;
+  animation: blink 1s infinite alternate;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+/* Shop Button */
+.shop-button {
+  background: #ff5733;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.3s;
+  width: auto;
+  margin: 20px;
+}
+
+.shop-button:hover {
+  background: #c13b25;
+}
+
+/* Slider Container */
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* Wrapper for Slides */
+.slider-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Individual Slide */
+.slide {
+  min-width: 100%;
+}
+
+/* Dots Navigation */
+.dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  margin: 5px;
+  background-color: gray;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.dot.active {
+  background-color: red;
+}
+.category-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+/* Banner Base Styles */
+.category-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 300px;
+  background-color: whitesmoke;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Category Image */
+.category-image {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  object-fit: contain;
+}
+
+/* Text Overlay */
+.category-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem;
+  background: white;
+ 
+  z-index: 2;
+}
+
+/* Typography */
+.category-overlay h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  transform: translateY(20px);
+  opacity: 0;
+  animation: slideUp 0.5s ease forwards;
+  color: red;
+}
+
+.category-overlay p {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  transform: translateY(20px);
+  text-overflow:ellipsis;
+  opacity: 0.9;
+  font-weight: 700;
+  color: rgb(78, 2, 255) !important;
+  animation: slideUp 0.5s ease 0.2s forwards;
+}
+@keyframes slideUp {
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+/* CTA Button */
+.explore-link {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  width: 300px;
+  margin-left: 100px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-color: #f01313;
+  color:white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  transform: translateY(20px);
+  opacity: 0;
+  animation: slideUp 0.5s ease 0.4s forwards;
+}
+
+.explore-link:hover {
+  background-color: #000000;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Background Image Settings */
+[class*="category-card"] {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/* Contact Section */
+.contact {
+  margin-top: 30px;
+  font-size: 1.2rem;
+  position: relative;
+}
+
+.contact span {
+  font-weight: bold;
+  color: #d9534f;
+}
+
+.contact::after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background: red;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  border-radius: 50%;
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+/* Bottom Content */
+.bottom-content {
+  margin-top: 20px;
+  font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  /* Hero Section */
+  .hero {
+    padding: 15px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  /* Holiday Banner */
+  .holiday-banner {
+    font-size: 1.2rem;
+    padding: 8px;
+  }
+
+  /* Shop Button */
+  .shop-button {
+    font-size: 1.1rem;
+    padding: 8px 16px;
+  }
+
+  /* Category Grid */
+  .category-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .category-card {
+    flex: 0 0 45%;
+    height: 250px;
+  }
+
+  /* Category Overlay */
+  .category-overlay {
+    padding: 1.5rem;
+  }
+
+  .category-overlay h2 {
+    font-size: 1.75rem;
+  }
+
+  .category-overlay p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .explore-link {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+    width: 200px;
+    margin-left: 130px;
+  }
+
+  /* Contact Section */
+  .contact {
+    font-size: 1.1rem;
+  }
+
+  /* Bottom Content */
+  .bottom-content {
+    font-size: 1rem;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .category-card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
+
+
+@media (max-width: 480px) {
+  /* Hero Section */
+  .hero {
+    padding: 15px;
+    width: auto;
+  }
+
+  .hero-title {
+    font-size: 1.6rem;
+  }
+
+  .highlight {
+    font-size: 1.5rem;
+  }
+
+  /* Holiday Banner */
+  .holiday-banner {
+    font-size: 1rem;
+    padding: 8px;
+    width: auto;
+  }
+
+  /* Shop Button */
+  .shop-button {
+    font-size: 1rem;
+    padding: 8px 15px;
+    width: auto;
+  }
+
+  /* Slider */
+  .slider-container {
+    max-width: 100%;
+  }
+
+  .slide {
+    min-width: 100%;
+  }
+
+  .dots {
+    margin-top: 5px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  /* Category Grid */
+  .category-grid {
+    grid-template-columns: 1fr;
+    width: auto;
+    gap: 1rem;
+  }
+
+  /* Category Card */
+  .category-card {
+    height: 200px;
+    width: auto;
+    border-radius: 15px;
+  }
+
+  .category-overlay {
+    padding: 1rem;
+  }
+
+  .category-overlay h2 {
+    font-size: 1.5rem;
+  }
+
+  .category-overlay p {
+    font-size: 0.8rem;
+  }
+
+  /* CTA Button */
+  .explore-link {
+    width: 100px;
+    margin-left: 0;
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  /* Contact Section */
+  .contact {
+    font-size: 1rem;
+  }
+
+  .contact::after {
+    width: 15px;
+    height: 15px;
+  }
+
+  /* Bottom Content */
+  .bottom-content {
+    font-size: 1rem;
+  }
+}
+

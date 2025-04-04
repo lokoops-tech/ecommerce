@@ -1,0 +1,44 @@
+.company {
+    padding: 50px 100px;
+    background-color: #f9f9f9;
+}
+
+.company-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.company h1 {
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.company h2 {
+    color: #444;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.company-values {
+    margin-top: 40px;
+}
+
+.company-values h3 {
+    color: #555;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.company-values ul {
+    list-style: none;
+    padding: 0;
+}
+
+.company-values li {
+    padding: 10px 0;
+    font-size: 1.1rem;
+    color: #666;
+    border-bottom: 1px solid #eee;
+}

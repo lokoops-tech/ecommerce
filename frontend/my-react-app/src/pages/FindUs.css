@@ -1,0 +1,36 @@
+.find-us-container {
+    text-align: center;
+    padding: 10px;
+    width: auto;
+  }
+  
+  .find-us-text {
+    color: red;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: center;
+    max-width: 100%;
+    white-space: normal;
+  }
+  
+  .find-us-link {
+    color: red;
+    text-decoration: none;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .find-us-text {
+      font-size: 14px;
+      padding: 5px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .find-us-text {
+      font-size: 12px;
+      padding: 5px;
+    }
+  }
+  

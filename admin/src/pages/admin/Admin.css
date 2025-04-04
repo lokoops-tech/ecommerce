@@ -1,0 +1,11 @@
+.admin{
+    display: flex;
+    overflow-y: auto;
+}
+
+@media(max-width:800px){
+    .admin{
+        flex-direction:column;
+        width: auto;
+    }
+}

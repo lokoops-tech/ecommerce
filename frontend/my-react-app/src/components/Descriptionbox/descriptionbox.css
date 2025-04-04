@@ -1,0 +1,67 @@
+/* General styling for the description box */
+.description-box {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the box navigator */
+.box-navigator {
+    display: flex;
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 20px;
+}
+
+/* Styling for each navigation box */
+.nav-box {
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #555;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Active navigation box styling */
+.nav-box.active {
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 4px 4px 0 0;
+}
+
+/* Hover effect for navigation boxes */
+.nav-box:hover {
+    background-color: #e9ecef;
+    color: #007bff;
+}
+
+/* Styling for the description content */
+.description-content {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Styling for the welcome message */
+.description-content h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #0c0c0c;
+}
+
+/* Styling for paragraphs */
+.description-content p {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Styling for the closing message */
+.description-content .closing-message {
+    font-weight: bold;
+    color: #171718;
+    margin-top: 20px;
+    font-style: italic;
+}

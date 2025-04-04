@@ -1,0 +1,101 @@
+.recently-viewed-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.recently-viewed-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.recently-viewed-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    /* Remove the fixed width of 200px which was causing problems */
+}
+
+.recently-viewed-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.3s ease;
+}
+
+.recently-viewed-item:hover {
+    transform: scale(1.05);
+}
+
+.recently-viewed-image {
+    width: 100%; /* This ensures the image takes full width of its container */
+    height: auto; /* This maintains aspect ratio */
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.recently-viewed-name {
+    font-size: 0.9rem;
+    text-align: center;
+    margin-bottom: 5px;
+    width: 100%; /* Ensure text wraps properly */
+}
+
+.recently-viewed-price {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .recently-viewed-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .recently-viewed-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .recently-viewed-container {
+        padding: 20px;
+        width: auto;
+        margin: 0 auto;
+        justify-content: center;
+    }
+    
+    .recently-viewed-grid {
+        grid-template-columns: repeat(2, minmax(140px, 1fr));
+        gap: 40px;
+        /* Remove the fixed width of 150px that was causing problems */
+    }
+    
+    .recently-viewed-image {
+        height: auto;
+        max-height: 180px;
+        width: auto;
+    }
+}
+
+@media (max-width: 320px) {
+    .recently-viewed-container {
+        padding: 10px;
+        width: auto;
+        margin: 0 auto;
+        justify-content: center;
+    }
+    .recently-viewed-grid {
+        grid-template-columns: repeat(1, minmax(100px, 1fr));
+    }
+}
