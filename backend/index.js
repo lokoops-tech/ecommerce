@@ -16,9 +16,9 @@ const productRoutes = require("./routes/Product");
 const orderRoutes = require("./routes/order");
 const adminRoutes = require("./routes/Admin");
 const newslettersRoutes = require("./routes/newsletters");
-const stockUpdateRoutes = require("./routes/StockUpdate");
+const stockUpdateRoutes = require("./routes/stockUpdate");
 const cartRoutes = require("./routes/cart");
-const resetPasswordRoutes = require("./routes/ResetPassword");
+const resetPasswordRoutes = require("./routes/resetPassword");
 const Analytics = require("./routes/Analytics");
 
 
