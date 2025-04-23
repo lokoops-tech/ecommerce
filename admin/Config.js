@@ -1,7 +1,7 @@
 // config.js
 
 // Base URL for the API
-const API_BASE_URL = 'http://localhost:4000';
+const API_BASE_URL = 'https://ecommerce-axdj.onrender.com';
 
 // Endpoints
 const UPLOAD_IMAGE_URL = `${API_BASE_URL}/upload`; // Endpoint for uploading images
