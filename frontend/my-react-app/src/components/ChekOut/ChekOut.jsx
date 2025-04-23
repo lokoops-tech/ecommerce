@@ -3,7 +3,7 @@ import { useShop } from "../../context/ShopContext";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { DELIVERY_LOCATIONS } from "../../Assets/DeliveryData.js";
-import "./Checkout.css";
+import "./CheckOut.css";
 
 const Checkout = () => {
   const navigate = useNavigate();
