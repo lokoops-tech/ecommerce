@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { toast } from 'react-toastify'; 
 import { RefreshCw, LoaderIcon } from 'lucide-react';
-import './vieworders.css';
+import './viewOrders.css';
 import { API_BASE_URL } from "../../../Config";
 
 const formatPrice = (price) => {
