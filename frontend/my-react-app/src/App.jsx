@@ -34,7 +34,7 @@ const Checkout = lazy(() => import("./components/ChekOut/ChekOut.jsx"));
 const BestProducts = lazy(() => import("./pages/BestProducts.jsx"));
 const Warranty = lazy(() => import("./components/Waranty/Waranty.jsx"));
 import All from "./pages/All.jsx";
-import SEO from "./pages/SEO.jsx";
+import SEO from "./pages/Seo.jsx";
 
 const App = () => {
   const categoryRoutes = {
