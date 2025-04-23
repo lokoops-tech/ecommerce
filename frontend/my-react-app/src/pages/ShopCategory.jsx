@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from "react";
 import { ArrowUpDown, ArrowDownUp, SortAsc } from "lucide-react";
 import { shopContext } from "../context/ShopContext";
-import Item from "../components/Item/Item.jsx";
+import Item from "../components/item/Item.jsx";
 import { Link } from "react-router-dom";
 import watch from '../Assets/watch.png';
 import phone from '../Assets/ph.png';
