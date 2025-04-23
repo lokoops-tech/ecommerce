@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { shopContext } from '../context/ShopContext';
-import SEO from './SEO';
+import SEO from './Seo.jsx';
 import Item from '../components/Item/Item';
 import './RecentlyViewed.css';
 
