@@ -2,7 +2,7 @@ import React, { useState, useEffect, useMemo, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { shopContext } from '../context/ShopContext';
 import SEO from './Seo.jsx';
-import Item from '../components/Item/Item';
+import Item from '../components/item/Item';
 import './RecentlyViewed.css';
 
 const RecentlyViewedItems = ({ currentCategory, currentProductId }) => {
