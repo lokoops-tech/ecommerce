@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './AdminNewsletter.css';
+import './AdminNewsLetter.css';
 import { FiLoader } from 'react-icons/fi';
 import { Email_Subscribers } from '../../../Config';
 
