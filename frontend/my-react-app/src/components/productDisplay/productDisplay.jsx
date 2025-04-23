@@ -9,7 +9,7 @@ import RecentlyViewedItems from '../../pages/RecentViewed';
 import { ToastContainer } from 'react-toastify';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import SEO from '../../pages/SEO';
+import SEO from '../../pages/Seo';
 import './ProductDisplay.css';
 
 const ProductDisplay = ({ product, sizes = [], keyFeatures = [] }) => {
