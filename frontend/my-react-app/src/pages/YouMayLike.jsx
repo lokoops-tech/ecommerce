@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import "./YouMayLike.css";
+import "./YouMaylike.css";
 const API_BASE_URL="http://localhost:4000"
 
 
