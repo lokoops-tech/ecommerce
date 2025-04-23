@@ -6,7 +6,7 @@ import Describe from "../components/Descriptionbox/DescriptionBox";
 import ProductDisplay from "../components/productDisplay/productDisplay";
 import RelatedProduct from "./relatedProducts";
 import YouMayLike from "./YouMayLike";
-import SEO from "../pages/seo.jsx"
+
 import RecentlyViewedItems from "./RecentViewed";
 
 const Product = () => {
