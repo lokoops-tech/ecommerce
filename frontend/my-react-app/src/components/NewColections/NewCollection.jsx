@@ -1,5 +1,5 @@
 import './NewCollection.css';
-import Item from '../Item/Item.jsx';
+import Item from '../item/Item.jsx';
 import { useEffect, useState } from 'react';
 const API_BASE_URL = "http://localhost:4000";
 
