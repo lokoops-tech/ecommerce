@@ -25,7 +25,7 @@ const Analytics = require("./routes/Analytics");
 // Middleware
 app.use(cors({
     origin: function (origin, callback) {
-        const allowedOrigins = ["http://localhost:5173", "http://localhost:5174"];
+        const allowedOrigins = ["http://localhost:5173", "https://ecommerce-3-93bn.onrender.com"];
         if (!origin || allowedOrigins.includes(origin)) {
             callback(null, true);
         } else {
