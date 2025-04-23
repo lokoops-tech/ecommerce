@@ -1,7 +1,7 @@
 import { useState, useEffect, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './relatedProduct.css';
-import Item from '../components/Item/Item';
+import Item from '../components/item/Item';
 
 // Define the API endpoint as a constant
 const API_ENDPOINT = 'http://localhost:4000/product/allproducts';
