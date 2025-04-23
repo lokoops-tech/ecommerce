@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Item from '../Item/Item.jsx';
+import Item from '../item/Item.jsx';
 import SEO from '../../pages/Seo.jsx';
 import './popular.css';
 
