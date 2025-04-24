@@ -14,7 +14,7 @@ const getDefaultCart = () => ({
     isValid: true  // Add validation state
 });
 
-const API_BASE_URL = "http://localhost:4000";
+const API_BASE_URL = "https://ecommerce-axdj.onrender.com";
 
 // Enhanced default cart with stockStatus
 
