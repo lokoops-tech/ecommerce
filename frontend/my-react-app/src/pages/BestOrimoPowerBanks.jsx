@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { useShop } from '../context/ShopContext';
-import './BestOrimoPowerBanks.css';
+import './BestOrimopowerBanks.css';
 
 const BestPowerbanks = () => {
     const { filterProducts } = useShop();
