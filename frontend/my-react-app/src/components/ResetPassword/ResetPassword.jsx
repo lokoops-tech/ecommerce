@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import './ResetPassword.css'
 
-const API_BASE_URL = "http://localhost:4000"
+const API_BASE_URL = "https://ecommerce-axdj.onrender.com"
 
 const ResetPassword = () => {
     const location = useLocation();
