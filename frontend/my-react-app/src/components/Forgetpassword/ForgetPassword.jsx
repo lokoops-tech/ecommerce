@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './ForgetPassword.css';
-const API_BASE_URL = "http://localhost:4000";
+const API_BASE_URL = "https://ecommerce-axdj.onrender.com";
 
 const ForgotPassword = () => {
     const [email, setEmail] = useState('');
