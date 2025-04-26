@@ -86,7 +86,7 @@ const RecentlyViewedItems = ({ currentCategory, currentProductId }) => {
 
     return (
         <>
-            <SEO 
+            <Seo
                 defaultData={{
                     metatitle: 'Gich-tech Recently Viewed Items',
                     description: 'Products you have recently viewed',
