@@ -177,7 +177,7 @@ const ShopCategory = ({ category, subcategory }) => {
     return (
         <div className="shop-container">
             {/* Add the SEO component */}
-            <SEO category={categoryData} />
+            <Seo category={categoryData} />
 
             {categoryBanners[category] && (
                 <div className="category-banner">
