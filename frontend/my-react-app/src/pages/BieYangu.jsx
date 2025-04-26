@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import './BeiYangu.css';
-const API_BASE_URL = "http://localhost:4000";
+const API_BASE_URL = "https://ecommerce-axdj.onrender.com";
 
 const BeiYangu = () => {
     const [products, setProducts] = useState([]);
