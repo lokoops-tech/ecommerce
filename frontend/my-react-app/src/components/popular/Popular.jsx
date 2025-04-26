@@ -48,7 +48,7 @@ const Popular = () => {
     return (
         <>
             {/* Use the reusable SEO component */}
-            <Seo />
+            <SEO/>
 
             <div className="popular">
                 <div className="popular-header">
