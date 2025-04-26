@@ -25,7 +25,7 @@ const Analytics = require("./routes/Analytics");
 // Middleware
 app.use(cors({
     origin: function (origin, callback) {
-        const allowedOrigins = ["https://gich-tech-acssories.onrender.com", "https://ecommerce-3-93bn.onrender.com"];
+        const allowedOrigins = ["https://gich-tech-acssories.onrender.com", "https://ecommerce-3-93bn.onrender.com", "https://eco-pirg.onrender.com"];
         if (!origin || allowedOrigins.includes(origin)) {
             callback(null, true);
         } else {
