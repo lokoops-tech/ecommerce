@@ -31,7 +31,7 @@ const Product = () => {
     if (loading || isInitialLoad) {
         return (
             <div className="loading-container">
-                <SEO defaultData={{
+                <Seo defaultData={{
                     title: "Loading Product...",
                     description: "Please wait while we load the product details"
                 }} />
@@ -44,7 +44,7 @@ const Product = () => {
     if (error) {
         return (
             <div className="error-container">
-                <SEO defaultData={{
+                <Seo defaultData={{
                     title: "Error Loading Product",
                     description: "We encountered an error while loading the product"
                 }} />
@@ -56,7 +56,7 @@ const Product = () => {
     if (!product) {
         return (
             <div className="not-found">
-                <SEO defaultData={{
+                <Seo defaultData={{
                     title: "Product Not Found",
                     description: "The product you are looking for does not exist"
                 }} />
@@ -69,7 +69,7 @@ const Product = () => {
     return (
         <div className="product-page">
             {/* Only render SEO when product is fully loaded */}
-            <SEO product={{
+            <Seo product={{
                 ...product,
                 metaTitle: `${product.name} | Gich-Tech Electronics`,
                 metaDescription: product.description || `Buy ${product.name} at Gich-Tech Electronics`,
