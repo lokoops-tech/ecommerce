@@ -6,5 +6,8 @@ export default defineConfig({
   plugins: [react()],
   build: {
     outDir: '.vite-build'
+  },
+   server: {
+    historyApiFallback: true
   }
 })
