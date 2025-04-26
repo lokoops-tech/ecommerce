@@ -30,7 +30,7 @@ const Item = (props) => {
 
     return (
         <>
-        <SEO 
+        <Seo 
         
         />
         <div className="all">
