@@ -49,16 +49,16 @@ mongoose
     });
 
 // Create upload directory if it doesn't exist
-const uploadDir = './upload/images';
+const uploadDir = path.join(__dirname, 'upload/images');
 if (!fs.existsSync(uploadDir)) {
     fs.mkdirSync(uploadDir, { recursive: true });
 }
 
-
-
 // Image storage configuration
 const storage = multer.diskStorage({
-    destination: './upload/images',
+    destination: function(req, file, cb) {
+        cb(null, path.join(__dirname, 'upload/images'));
+    },
     filename: (req, file, cb) => {
         return cb(null, `${file.fieldname}_${Date.now()}${path.extname(file.originalname)}`);
     }
@@ -66,13 +66,13 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
-// Serving static images
-app.use('/images', express.static('upload/images'));
+// Assuming 'app' is your Express application
+// If this is in a separate file, you'll need to export these functions or integrate them appropriately
 
-// API root endpoint
-app.get("/", (req, res) => {
-    res.send("Express App is running");
-});
+// Serving static images with absolute path
+app.use('/images', express.static(path.join(__dirname, 'upload/images')));
+
+
 
 // Upload endpoint for images
 app.post("/upload", upload.single('product'), (req, res) => {
@@ -83,9 +83,14 @@ app.post("/upload", upload.single('product'), (req, res) => {
                 error: "No file uploaded"
             });
         }
+        
+        // Force HTTPS in the image URL
+        const host = req.get('host');
+        const imageUrl = `https://${host}/images/${req.file.filename}`;
+        
         res.json({
             success: true,
-            image_url: `${req.protocol}://${req.get('host')}/images/${req.file.filename}`
+            image_url: imageUrl
         });
     } catch (error) {
         console.error("Upload error:", error);
