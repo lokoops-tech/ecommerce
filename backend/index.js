@@ -9,6 +9,8 @@ const cors = require("cors");
 const fs = require('fs');
 require("dotenv").config(); // Load environment variables
 app.use(express.json());
+const cloudinary = require('cloudinary').v2;
+
 
 // Import routes
 const authUsersRoutes = require("./routes/authUsers");
@@ -20,6 +22,7 @@ const stockUpdateRoutes = require("./routes/stockUpdate");
 const cartRoutes = require("./routes/cart");
 const resetPasswordRoutes = require("./routes/resetPassword");
 const Analytics = require("./routes/Analytics");
+
 
 
 // Middleware
@@ -73,9 +76,14 @@ const upload = multer({ storage: storage });
 app.use('/images', express.static(path.join(__dirname, 'upload/images')));
 
 
+cloudinary.config({ 
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME, 
+  api_key: process.env.CLOUDINARY_API_KEY, 
+  api_secret: process.env.CLOUDINARY_API_SECRET 
+});
 
 // Upload endpoint for images
-app.post("/upload", upload.single('product'), (req, res) => {
+app.post("/upload", upload.single('product'), async (req, res) => {
     try {
         if (!req.file) {
             return res.status(400).json({
@@ -84,14 +92,18 @@ app.post("/upload", upload.single('product'), (req, res) => {
             });
         }
         
-        // Force HTTPS in the image URL
-        const host = req.get('host');
-        const imageUrl = `https://${host}/images/${req.file.filename}`;
+        // Upload to Cloudinary
+        const result = await cloudinary.uploader.upload(req.file.path);
         
+        // Return the Cloudinary URL
         res.json({
             success: true,
-            image_url: imageUrl
+            image_url: result.secure_url
         });
+        
+        // Optionally delete the local file after upload
+        fs.unlinkSync(req.file.path);
+        
     } catch (error) {
         console.error("Upload error:", error);
         res.status(500).json({
